@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title>KY surface mining site compare</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      body * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- request js -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css' type='text/css' />
+
+    <div id='before' class='map'></div>
+    <div id='after' class='map'></div>
+    <div id='map'></div>
+
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hhaG40OCIsImEiOiJjazJ0Y3d3NjAwdW1mM2tsNzdpd3Z4dmdrIn0.seEE6sPjef61B_psNhYOvQ';
+
+      var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-84.27, 37.839], // starting position [lng, lat]
+        zoom: 6.5 // starting zoom
+      });
+
+
+
+
+
+      var beforeTileset = 'ghahn48.b1i3h2dr';
+      var afterTileset = 'ghahn48.4qtzlfww';
+
+      var beforeMap = new mapboxgl.Map({
+        container: 'before',
+        style: {
+          version: 8,
+          sources: {
+            'raster-tiles': {
+              type: 'raster',
+              url: 'mapbox://' + beforeTileset,
+              tileSize: 256
+            }
+          },
+          layers: [{
+            id: 'simple-tiles',
+            type: 'raster',
+            source: 'raster-tiles',
+            minzoom: 4,
+            maxzoom: 12
+          }]
+        },
+
+      });
+
+      var afterMap = new mapboxgl.Map({
+        container: 'after',
+        style: {
+          version: 8,
+          sources: {
+            'raster-tiles': {
+              type: 'raster',
+              url: 'mapbox://' + afterTileset,
+              tileSize: 256
+            }
+          },
+          layers: [{
+            id: 'simple-tiles',
+            type: 'raster',
+            source: 'raster-tiles',
+            minzoom: 4,
+            maxzoom: 12
+          }]
+        },
+        center: [-84.27, 37.839], // starting position [lng, lat]
+        zoom: 6.5 // starting zoom
+      });
+
+      var map = new mapboxgl.Compare(beforeMap, afterMap, {});
+    </script>
+
+  </body>
+
+</html>
