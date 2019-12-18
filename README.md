@@ -6,4 +6,4 @@ Data:
 2. Landsat imagery from [Earth Explorer](https://earthexplorer.usgs.gov/)
 
 Processing Data:
-1. [Processing satellite imagery](https://docs.mapbox.com/help/tutorials/processing-satellite-imagery/) tutorial for Landsat stacking bands to one tif file 
+1. [Processing satellite imagery](https://docs.mapbox.com/help/tutorials/processing-satellite-imagery/) tutorial for Landsat stacking bands to one tif files. Using Path:19 Row:34
