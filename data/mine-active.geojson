@@ -1,8 +1,5 @@
 {
-"type": "FeatureCollection",
-"name": "mine-active",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
+"type": "FeatureCollection","features": [
 { "type": "Feature", "properties": { "MINE_STATU": "Active", "MINE_TYPE": "UTC", "MINE_SUG": "Underground", "COMPANY": "Blue Diamond Mining LLC", "OPERATOR": "Kevin Varney - 6672 - PE0000420", "COUNTY": "Perry", "REGION": "East", "DISTRICT": "Hazard", "DD_LAT": 37.02145795, "DD_LONG": -83.11625262, "AR_YEAR": 2016, "AR_TONNAGE": 0, "OLD_COMMEN": null }, "geometry": { "type": "Point", "coordinates": [ -83.1163, 37.0215 ] } },
 { "type": "Feature", "properties": { "MINE_STATU": "Active", "MINE_TYPE": "UTC", "MINE_SUG": "Underground", "COMPANY": "Blue Diamond Mining LLC", "OPERATOR": "Kevin Varney - 6672 - PE0000420", "COUNTY": "Perry", "REGION": "East", "DISTRICT": "Hazard", "DD_LAT": 37.02591836, "DD_LONG": -83.11811534, "AR_YEAR": 2016, "AR_TONNAGE": 0, "OLD_COMMEN": null }, "geometry": { "type": "Point", "coordinates": [ -83.1181, 37.0259 ] } },
 { "type": "Feature", "properties": { "MINE_STATU": "Active", "MINE_TYPE": "UTC", "MINE_SUG": "Underground", "COMPANY": "Lone Mountain Processing Inc", "OPERATOR": "Kenneth Cochran - 7196", "COUNTY": "Harlan", "REGION": "East", "DISTRICT": "Harlan", "DD_LAT": 36.87638178, "DD_LONG": -83.0106313, "AR_YEAR": 2016, "AR_TONNAGE": 0, "OLD_COMMEN": null }, "geometry": { "type": "Point", "coordinates": [ -83.0106, 36.8764 ] } },
